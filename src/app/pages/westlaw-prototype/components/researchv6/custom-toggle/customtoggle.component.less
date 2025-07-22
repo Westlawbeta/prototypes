@@ -1,0 +1,196 @@
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between different toggle examples */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Flex container for each toggle example */
+.toggle-example-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the custom toggle switch */
+.toggle-switch {
+    position: relative;
+    display: inline-flex; /* Use flex to align checkbox, slider, and text */
+    align-items: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+    user-select: none; /* Prevent text selection */
+    outline: none; /* Remove default outline, custom focus will be added */
+    border-radius: 9999px; /* Fully rounded for the focus outline */
+    padding: 4px; /* Padding to ensure focus outline is visible */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hide the default checkbox input */
+.toggle-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none; /* Ensure it doesn't interfere with pointer events on the slider */
+    color:white;
+}
+
+/* The slider (track) */
+.toggle-slider {
+    width: 44px; /* Width of the track */
+    height: 24px; /* Height of the track */
+    background-color: white; /* Off state background */
+    border-radius: 9999px; /* Fully rounded */
+    position: relative;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border: 1px solid #c0c0c0; /* Off state border */
+    flex-shrink: 0; /* Prevent it from shrinking */
+}
+
+/* The thumb */
+.toggle-thumb {
+    position: absolute;
+    content: '';
+    height: 18px; /* Height of the thumb */
+    width: 18px; /* Width of the thumb */
+    left: 2px; /* Initial position for off state */
+    bottom: 2px; /* Aligns vertically within the slider */
+    background-color: white; /* Thumb color */
+    border-radius: 50%; /* Circular thumb */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c0c0c0; /* Off state thumb border */
+}
+
+/* Checkmark SVG inside the thumb */
+.toggle-thumb svg {
+    fill: none;
+    stroke: white; /* Checkmark color when on */
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 12px;
+    height: 12px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Label text */
+.toggle-label-text {
+    margin-left: 12px; /* Space between toggle and text */
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5; /* Ensure text aligns well */
+}
+
+/* ---------------------------------------------------------------------- */
+/* State Styles */
+/* ---------------------------------------------------------------------- */
+
+// /* ON State */
+.toggle-input:checked + .toggle-slider {
+    background-color: white; /* Blue background for on state */
+    border: 1px solid #2563eb;
+}
+
+.toggle-input:checked + .toggle-slider .toggle-thumb {
+    transform: translateX(20px); /* Move thumb to the right */
+    background-color: #054688; /* Thumb remains white */
+    border-color: #054688; /* Blue border for on state thumb */
+}
+
+.toggle-input:checked + .toggle-slider .toggle-thumb svg {
+    opacity: 1; /* Show checkmark when on */
+    stroke: white; /* Checkmark color */
+}
+
+/* HOVER State (applied to the label) */
+.toggle-switch:hover .toggle-slider {
+    background-color: #EDF6FF; /* Slightly darker grey for hover off */
+    border-color: #054688; /* Darker border for hover off */
+}
+
+.toggle-switch:hover .toggle-slider .toggle-thumb {
+    border-color: #054688; /* Darker border for hover off thumb */
+}
+
+.toggle-input:checked + .toggle-slider:hover {
+    background-color: #EDF6FF; /* Darker blue for hover on */
+    border: 1px solid #2563eb;
+}
+
+
+// /* FOCUS State (applied to the label using :focus-within) */
+// .toggle-switch:focus-within {
+//     outline: 2px solid #0065FF; /* Blue outline for focus */
+//     outline-offset: 2px; /* Space between outline and component */
+// }
+
+// .toggle-switch:focus-within .toggle-slider {
+//     // border-color: #3b82f6; /* Blue border for focus off track */
+//     outline: 2px solid #0065FF; /* Blue outline for focus */
+//     outline-offset: 2px; /* Space between outline and component */
+//     background:#054688;
+// }
+
+// .toggle-switch:focus-within .toggle-slider .toggle-thumb {
+//     background:white;
+// }
+
+// .toggle-input:checked + .toggle-slider:focus-within {
+//     background-color: #1e40af; /* Even darker blue for focus on track */
+//     border-color: #1e40af; /* Even darker blue border for focus on track */
+// }
+
+// .toggle-input:checked + .toggle-slider:focus-within .toggle-thumb {
+//     border-color: #1e40af; /* Even darker blue border for focus on thumb */
+// }
+
+// /* Styles for simulating hover/focus on static examples */
+// .group.hover-state .toggle-switch .toggle-slider {
+//     background-color: #d0d0d0; /* Slightly darker grey for hover off */
+//     border-color: #a0a0a0; /* Darker border for hover off */
+// }
+
+// .group.hover-state .toggle-switch .toggle-thumb {
+//     border-color: #a0a0a0; /* Darker border for hover off thumb */
+// }
+
+// .group.hover-state .toggle-input:checked + .toggle-slider {
+//     background-color: #1d4ed8; /* Darker blue for hover on */
+//     border-color: #1d4ed8; /* Darker blue border for hover on */
+// }
+
+// .group.hover-state .toggle-input:checked + .toggle-slider .toggle-thumb {
+//     border-color: #1d4ed8; /* Darker blue border for hover on thumb */
+// }
+
+// // .group.focus-state .toggle-switch {
+// //     outline: 2px solid #3b82f6; /* Blue outline for focus */
+// //     outline-offset: 2px; /* Space between outline and component */
+// // }
+
+// // .group.focus-state .toggle-switch .toggle-slider {
+// //     border-color: #3b82f6; /* Blue border for focus off track */
+// // }
+
+// // .group.focus-state .toggle-switch .toggle-thumb {
+// //     border-color: #3b82f6; /* Blue border for focus off thumb */
+// // }
+
+// // .group.focus-state .toggle-input:checked + .toggle-slider {
+// //     background-color: #1e40af; /* Even darker blue for focus on track */
+// //     border-color: #1e40af; /* Even darker blue border for focus on track */
+// // }
+
+// // .group.focus-state .toggle-input:checked + .toggle-slider .toggle-thumb {
+// //     border-color: #1e40af; /* Even darker blue border for focus on thumb */
+// // }

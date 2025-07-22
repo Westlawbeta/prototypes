@@ -1,0 +1,30 @@
+<div class="top-centered-page">
+    <div class="set-as-new-page">
+        <span>Set as start page</span><app-custom-toggle></app-custom-toggle>
+        
+    </div>
+    <div class="main-content">
+        <div class="header" *ngIf="searchType != 'Search'">
+            <div class="title">
+                Get in-depth analysis with Westlaw Deep AI Research
+            </div>
+            <div class="subtitle">
+                Dive further into your research topics with detailed, fully cited reports.
+            </div>
+        </div>
+        <div class="header" *ngIf="searchType === 'Search'">
+            <div class="title">
+                Find key info with Westlaw Search
+            </div>
+            <div class="subtitle">
+                Explore cases, statues, regulations, and other legal resources. Enter keywords or choose a search type to get started.
+            </div>
+        </div>
+        <div class="content">
+            <app-search-bar-v2 (searchTypeChange)="searchTypeChanged($event)"></app-search-bar-v2>
+        </div>
+    </div>
+    <div class="content">
+        <app-bookmarks></app-bookmarks>
+    </div>
+</div>

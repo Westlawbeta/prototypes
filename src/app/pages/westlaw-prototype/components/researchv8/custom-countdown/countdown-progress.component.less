@@ -1,0 +1,64 @@
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    margin: 20px auto; /* Center the container and add some margin */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 5px; /* Height of the progress bar */
+    background-color: white; /* The white base of the progress bar */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the fill stays within the rounded corners */
+    margin-bottom: 15px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #032E5B; /* The dark blue filling color */
+    transition: width 0.1s linear; /* Smooth transition for updates */
+}
+
+.percentage-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 14px1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.status-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #032E5B;
+    margin-bottom:0px;
+}

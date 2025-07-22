@@ -1,0 +1,237 @@
+.sources-content {
+  width: 100%;
+  max-width: 700px;
+  padding: 0px 12px;
+
+  .title {
+    color: var(--color-text-heavy, #212223);
+    /* type/heading/default/md/strong/standard */
+    font-family: Clario;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 19.2px */
+  }
+
+  .sub-header-toolbar {
+    display: flex;
+    gap: 2px;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+
+
+    .heading-left {
+      display: flex;
+      height: 24px;
+      padding: 4px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+    .filter-label {
+      display: block;
+      color: var(--color-interactive-on-tertiary-default, #1F1F1F);
+      /* type/body/default/sm/strong/compact */
+      font-family: "Source Sans 3";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 16.8px */
+    }
+  }
+}
+
+.hide{
+  display: none;;
+}
+
+.snippets-area{
+  padding-left:20px;
+}
+
+.snippet{
+  padding-left:10px;
+}
+
+.source-filter{
+  position: relative;
+  top: 2px;
+  font-weight: 600;
+  color: #032E5B;
+  cursor: pointer;
+  right:20px;
+
+  saf-icon{
+    padding-right:10px;
+    position: relative;
+    top:1px;
+  }
+}
+
+.source-content{
+  padding: 16px;
+  border: 1px solid silver;
+  border-radius: 8px 8px 0px 0px;
+
+  p{
+    margin-bottom:0px;
+  }
+
+  .source-content-header {
+    padding-bottom:10px;
+
+    span{
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.source-content-2{
+  padding: 16px;
+  border: 1px solid silver;
+  border-radius: 0px 0px 8px 8px;
+  border-top:1px solid transparent;
+
+  p{
+    margin-bottom:0px;
+  }
+
+  .source-content-2-header{
+    padding-bottom:15px;
+
+    span{
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .source-content-2-controls{
+    position: relative;
+    float:right;
+
+    saf-icon{
+      padding:0px 10px;
+    }
+  }
+}
+
+.sources-listing {
+
+  ol {
+    padding-left: 32px;
+
+    ::marker {
+      color: var(--color-text-strong, #404040);
+      text-align: right;
+
+      /* type/body/default/md/regular/compact */
+      font-family: "Source Sans 3";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%; /* 21.6px */
+    }
+  }
+
+  .source-item {
+    margin: 8px 0;
+    padding-left: 8px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+  }
+
+ .source-title {
+  color: var(--color-data-viz-sky-700, #032E5B);
+  font-family: "Source Sans 3";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%; /* 21.6px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+ }
+
+ .source-metadata {
+  display: block;
+  color: var(--color-text-strong, #404040);
+
+  /* type/body/default/sm/regular/compact */
+  font-family: "Source Sans 3";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+  margin-bottom: 8px;
+ }
+
+ .source-content {
+  display: block;
+  color: var(--color-text-strong, #404040);
+  margin-bottom: 0px;
+  border-bottom: transparent;
+
+  /* type/body/default/md/regular/compact */
+  font-family: "Source Sans 3";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%; /* 21.6px */
+ }
+}
+
+.prelim{
+  .source-content{
+    border-radius: 8px;
+  }
+  .source-content-2{
+    display:none;
+  }
+}
+
+// .inprogress{
+//   list-style:none;
+// }
+.snippet-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.snippet-container {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.snippet-container.active {
+  display: block;
+  opacity: 1;
+}
+
+.source-content,
+.source-content-2 {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+
+  p{
+    padding:10px;
+  }
+}
+
+.source-content-2-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.source-content-2-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

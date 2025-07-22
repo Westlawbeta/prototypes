@@ -1,0 +1,30 @@
+<div class="top-centered-page" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
+    <div class="set-as-new-page" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
+        <span>Set as start page</span><app-custom-toggle></app-custom-toggle>
+        
+    </div>
+    <div class="main-content" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
+        <div class="header" *ngIf="searchType != 'Search'">
+            <div class="title">
+                Welcome to Westlaw <span class="orange">Deep AI Research</span>
+            </div>
+            <div class="subtitle">
+                Dive further into your research topics with detailed, fully cited reports.
+            </div>
+        </div>
+        <div class="header" *ngIf="searchType === 'Search'">
+            <div class="title">
+                Find key info with Westlaw Search
+            </div>
+            <div class="subtitle">
+                Explore cases, statues, regulations, and other legal resources. Enter keywords or choose a search type to get started.
+            </div>
+        </div>
+        <div class="content">
+            <app-search-bar-v6 (searchTypeChange)="searchTypeChanged($event)"></app-search-bar-v6>
+        </div>
+    </div>
+    <div class="content" [class.landing]="this.href === '/new-landing-v6' || this.href === '/new-landing-v7' || this.href === '/new-landing-v8'">
+        <app-bookmarks></app-bookmarks>
+    </div>
+</div>

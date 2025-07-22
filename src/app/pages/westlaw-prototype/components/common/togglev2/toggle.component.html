@@ -1,0 +1,16 @@
+<div class="toggle-menu">
+    <div *ngFor="let option of options" class="toggle-options">
+        <app-button-v2 
+            class="toggle-btn"
+            [label]="option.label" 
+            [height]="'36px'"
+            [icon]="getIcon(option)" 
+            [deepSearch]="option.deepSearch ? option.deepSearch : 0"
+            [color]="option.textColor || ''"
+            [active]="option.label === selectedOption?.label"
+            [font]="'clario'"
+            [includeDropdown]="option.includeDropdown ? (option.dropdownOnlyWhenActive ? (option.label === selectedOption?.label) : true) : false"
+            (click)="selectOption(option)">
+        </app-button-v2>
+    </div>
+</div>

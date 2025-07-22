@@ -1,0 +1,137 @@
+ /* button.component.css */
+.base-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  height: 32px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  background: inherit;
+}
+
+.base-button:not(.expanded) {
+  border-radius: 50%;
+  max-width: 34px;
+  padding: 0 0.5rem;
+  margin-left: 0.4rem;
+
+  &:hover {
+    filter: none;
+  }
+}
+
+.border {
+  border: 1px solid #212223 !important;
+}
+
+.base-button:disabled {
+  background-color: #d2d2d2 !important;
+  cursor: default !important;
+
+  .button-content {
+    color: var(--saf-color-interactive-disabled-strong) !important;
+  }
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0.25rem;
+  border-radius: 8px;
+}
+
+.button-text {
+  padding-left: 0.5rem;
+  font-family: Source Sans 3;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 135%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+.button-text.no-icon {
+  padding-left: 0px;
+}
+
+.base-button i {
+  font-size: 16px;
+}
+
+.blue {
+  color: #032e5b;
+}
+
+.blue-light {
+  color: #005da2;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.gray {
+  color: #8A8A8A;
+
+}
+
+.orange {
+  color: #AB3300
+}
+
+.racing-green {
+  color: #1D4B34;
+  border-color: #1D4B34 !important;
+}
+
+.secondary {
+  color: #032e5b;
+  border-color: #032e5b !important;
+}
+
+.background-blue {
+  background-color: #032E5B;
+}
+
+.background-attach {
+  background-color: #FAFAFA;
+  border: 1px solid #032E5B !important;
+}
+
+.dropdown-icon {
+  padding-left: 0.5rem;
+}
+
+.base-button.active {
+  background-color: #e3f1fc;
+  // border: 1px solid #032e5b;
+}
+
+.base-button:hover {
+  filter: saturate(2);
+}
+
+.clario {
+  font-family: Clario;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 115%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+
+.base-button.btngrp{
+  width:30px;
+  padding:0px;
+  margin:0px;
+}
+
+// svg{
+//   position: relative;
+//   left: -6px;
+// }

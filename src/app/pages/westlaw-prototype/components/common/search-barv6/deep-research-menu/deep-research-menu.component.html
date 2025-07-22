@@ -1,0 +1,65 @@
+<!-- response-time-menu.component.html -->
+<div class="response-time-menu">
+    <!-- <div class="header">
+        <span class="title">Select type of research</span>
+    </div> -->
+    <div class="button-wrapper" (click)="toggleDeepResearchType(1)" >
+        <div class="item" [class.active]="deepSearch === 1">
+            <div class="left">
+                <svg width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333Z" fill="#666666"/>
+                </svg>
+                    
+                <!-- <saf-icon color="#212223" icon-name="file-lines" presentation></saf-icon> -->
+            </div>
+            <div class="left">
+                <div class="item-name">Quick <span class="approx-time">~ 3 mins</span></div>
+                <div class="description">Works well for questions that are on well-established principles of law and high-level overviews of more complex legal issues.</div>
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper" (click)="toggleDeepResearchType(2)" >
+        <div class="item" [class.active]="deepSearch === 2">
+            <div class="left">
+                <svg width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333Z" fill="black"/>
+                </svg>
+                    
+                <!-- <saf-icon color="#212223" icon-name="file-lines" presentation></saf-icon> -->
+            </div>
+            <div class="left">
+                <div class="item-name">Standard <span class="approx-time">~ 10 mins</span></div>
+                <div class="description">More in-depth research with a thorough analysis and deeper verification. Works well for most questions.</div>
+            </div>
+        </div>
+    </div>
+    <div class="button-wrapper" (click)="toggleDeepResearchType(3)" >
+        <div class="item" [class.active]="deepSearch === 3">
+            <div class="left">
+                <!-- <saf-icon color="#212223" icon-name="file-lines" presentation></saf-icon> -->
+                <svg width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333ZM5.83333 19.5H14.1667H15V21.125H14.1667H5.83333H5V19.5H5.83333Z" fill="#666666"/>
+                </svg>
+                    
+            </div>
+            <div class="left">
+                <div class="item-name">Expanded <span class="approx-time">15+ mins</span></div>
+                <div class="description">Extensive research with a complete analysis of your question, including the ability to see arguments from both sides, potential rebuttals, governing law analysis, and more.  Works well for a full overview of complex questions.</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="button-wrapper" (click)="toggleDeepResearchType()">
+        <div class="item">
+            <div class="left">
+                <saf-icon color="#212223" icon-name="list-ul" presentation></saf-icon>
+            </div>
+            <div class="left">
+                <div class="item-name">50 State Surveys</div>
+                <div class="description">Compare statutes and regulations from all states</div>
+            </div>
+            <div class="right">
+                <saf-icon icon-name="arrow-up-right-from-square" appearance="light" presentation></saf-icon>
+            </div>
+        </div>
+    </div> -->
+</div>

@@ -1,0 +1,73 @@
+/* styles.css */
+
+.main-page {
+  display: grid;
+  grid-template-areas:
+    "aside header"
+    "aside main"
+    "aside footer";
+  grid-template-rows: auto 1fr ;
+  grid-template-columns: 170px 1fr;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden; //fixes the horizontal scrollbar issue
+  overflow-y: hidden;
+  transition: grid-template-columns 0.3s;
+}
+
+.main-page.collapsed {
+  grid-template-columns: 48px 1fr;
+}
+
+header {
+  grid-area: header;
+  position: absolute;
+  width: 100%;
+  transition: width 0.3s ease-out;
+  max-width: calc(100vw - 170px);
+}
+
+header.extended {
+  max-width: calc(100vw - 48px);
+}
+
+.banner {
+  width: 100%;
+  height: 230px;
+}
+
+aside {
+  grid-area: aside;
+  height: 100%;
+}
+
+main {
+  grid-area: main;
+  height: calc(100vh - 60px);
+}
+
+main.expanded {
+  height: calc(100vh - 137px);
+}
+
+main.hiddenFooter {
+  height: 100vh;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 60px;
+  padding-top: 5px;
+}
+
+footer.expanded {
+  height: 137px;
+}
+
+.search-bar-container {
+  width: 720px;
+}

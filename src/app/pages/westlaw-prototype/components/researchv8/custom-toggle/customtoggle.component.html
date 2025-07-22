@@ -1,0 +1,13 @@
+<!-- toggle.component.html -->
+<label class="toggle-switch">
+    <input type="checkbox" class="toggle-input" [checked]="isChecked" (change)="onToggleChange($event)">
+    <span class="toggle-slider">
+        <span class="toggle-thumb">
+            <!-- Checkmark SVG -->
+            <svg viewBox="0 0 24 24">
+                <path d="M5 13l4 4L19 7"></path>
+            </svg>
+        </span>
+    </span>
+    <span class="toggle-label-text">{{ labelText }}</span>
+</label>

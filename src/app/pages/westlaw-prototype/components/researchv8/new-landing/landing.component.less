@@ -1,0 +1,155 @@
+/* General body styles for consistent background and font */
+
+//   .container{
+//     background-image: url('/assets/images/banner-image.png');
+//   }
+  
+img {
+    display: block;
+    margin: auto;
+  }
+.bellyband-container{
+    width:1175px;
+    margin: auto;
+    padding:16px 0px 18px 0px;
+
+    .band{
+       background-color:#E3F1FD;
+       border-radius: 8px;
+       padding: 16px 24px 16px 24px;
+       height: 75px;
+       
+
+       h1{
+        font-weight:600;
+        font-size:20px;
+        margin-bottom:0px;
+       }
+
+       p{
+        font-weight: 400;
+        font-size:16px;
+       }
+
+       .left{
+        position: relative;
+        float:left;
+       }
+       .right{
+        position: relative;
+        float: right;
+       }
+
+       button{
+        background-color: #054688;
+        color:white;
+        border-radius:4px;
+        width: 140px;
+        height:40px;
+        font-size:16px;
+        font-weight:500;
+       }
+    }
+}
+
+.main-container{
+    background-color:#032E5B;
+}
+
+
+
+app-new-researchv6{
+    position: absolute;
+    left: calc(50%);
+    transform: translateX(-50%);
+    width: 1270px;
+    top: 450px;
+  }
+
+.header{
+    padding-bottom:15px;
+}
+
+
+    .header-container{
+        height: 70px;
+        background: #032E5B;
+        position: absolute;
+        left: calc(50%);
+        transform: translateX(-50%);
+        top: 0;
+        width: 1270px;
+    }
+    .left-header{
+      position: relative;
+      float: left;
+      top:25px;
+      left:25px;
+
+      img{
+        display: inline;
+        margin-right:10px;
+      }
+
+      saf-icon{
+        position: relative;
+        top:7px;
+      }
+    }
+    .right-header{
+      position:relative;
+      float:right;
+      top:25px;
+  
+      .sign-out{
+        border: 1px solid #fff3
+      }
+  
+      button{
+        color:white;
+        background:transparent;
+        border:none;
+        font-size:12px;
+        margin-right:10px;
+        &:hover{
+          background-color:#ffffff1a;
+        }
+        .Svg{
+          width:25px;
+          max-width: none;
+          display: block;
+          .Svg-inner{
+            display:block;
+            height:0;
+            padding-bottom:100%;
+            position: relative;
+            width:100%;
+  
+            svg{
+              height: 100%;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .sign-out{
+        border: 1px solid #fff3
+      }
+    
+  }
+  
+  .icon25{
+    background-image: url('/assets/images/th_indigo_icons.svg');
+      background-repeat: no-repeat;
+      background-size: 15.625em;
+      display: inline-block;
+      font-size: 16px;
+      height: 1.5625em;
+      text-indent: -999em;
+      vertical-align: middle;
+      width: 1.5625em;
+      background-position: -3.125em -317.1875em;
+  }

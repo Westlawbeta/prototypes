@@ -1,0 +1,30 @@
+<button class="base-button" [class.btngrp]="icon === 'paperclip'" [disabled]="disabled" [ngClass]="'background-' + backgroundColor" [class]="color" [class.expanded]="expanded" [class.border]="addBorder" [class.active]="active" [style.padding-right]="label === 'Deep AI Research' ? '0px' : '12px'" [style.width]="width ? width : null" [style.height]="height ? height : null">
+    <div class="button-content">
+        <saf-icon [iconName]="active ? 'scrubber' : 'circle'" size="16px" class="dark-blue" [appearance]="active ? 'solid' : 'light'" ></saf-icon>
+        
+        <span class="button-text" [ngClass]="font" *ngIf="expanded" [class.no-icon]="!icon || icon.length == 0">{{label}}</span>
+        <span class="seperator" *ngIf="active"></span>
+        <saf-icon [iconName]="icon" *ngIf="active && deepSearch === 0" size="16px" [ngClass]="iconColor" [appearance]="iconAppearance" ></saf-icon>
+
+        <svg *ngIf="active && deepSearch === 1" width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333Z" fill="#666666"/>
+        </svg>
+        <svg *ngIf="active && deepSearch === 2" width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333Z" fill="#666666"/>
+        </svg>
+        <svg *ngIf="active && deepSearch === 3" width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333ZM5.83333 19.5H14.1667H15V21.125H14.1667H5.83333H5V19.5H5.83333Z" fill="#666666"/>
+        </svg>
+
+        <saf-icon class="dropdown-icon" *ngIf="active" icon-name="chevron-down" size="16px"></saf-icon>
+        <saf-icon class="dropdown-icon" *ngIf="secondIcon" [iconName]="secondIcon" size="16px"></saf-icon>
+        
+    </div>
+</button>
+
+<!-- <button class="toggle-dropdown-button" [class.active]="active">
+    <div class="button-content">
+        
+        <span class="button-text" [ngClass]="font" *ngIf="expanded" [class.no-icon]="!icon || icon.length == 0">{{label}}</span>
+    </div>
+</button> -->

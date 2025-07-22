@@ -1,0 +1,164 @@
+<div class="sources-content">
+  <div class="sub-header-toolbar">
+    <div class="">
+      <!-- <saf-icon slot="end" icon-name="filter" appearance="light" presentation>
+      </saf-icon>
+      <span class="filter-label">Filters</span> -->
+      <div>
+        <h3>Sources</h3>
+      </div>
+      <div>
+        <p>Sources will update as your report loads</p>
+      </div>
+
+    </div>
+    <div class="source-filter" *ngIf="fullReport">
+      <saf-icon slot="start" icon-name="filter" appearance="light" presentation /><span>Filters</span>
+    </div>
+  </div>
+
+  <div class="sources-listing">
+    <ol [class.inprogress]="!fullReport">
+      <!-- <li class="source-item" *ngFor="let source of sources.sources; let sourceIndex = index" [class.hide]="source.id >= 5 && !fullReport">
+        <a href="#" class="source-title">{{ source.title }}</a>
+        <span class="source-metadata">{{ source.subtitle }}</span>
+        <div class="new-source-content">
+          <p>Finding triable issues of fact regarding discrimination despite similarities in protected characteristics (gender) but differences in race. </p>
+        </div>
+         <div class="source-content">
+          <div class="source-content-header">
+            <span>AI Summary</span>
+          </div>
+          <p>Manufacturer brought action against parts supplier for breach of contract, breach of warranty, and intentional and negligent misrepresentation after supplier changed manufacturing process, which resulted in increase failure rate. The Superior Court, after a jury trial, entered a judgement in favor of the manufacturer in the sum of $7,533,924, including $6 million in punitive damages. Supplier appealed. The Court of Appeal affirmed in part and reversed in part. The Supreme Court granted review, superseding the opinion of the Court of Appearl.</p>
+        </div>
+        <div class="source-content-2">
+          <div class="source-content-2-header">
+            <span>Snippet 1 of 2</span>
+            <div class="source-content-2-controls">
+              <saf-icon slot="start" icon-name="chevron-left" appearance="light" presentation />
+              <saf-icon slot="start" icon-name="chevron-right" appearance="light" presentation />
+            </div>
+          </div>
+          <p>... Because plaintiff Robinson Helicopter Company, Inc.'s (Robinson) fraud and intentional misrepresentation claim, with respect to Dana Corporation's (Dana) provision of false certificates of conformance, is an independent action based in tort, we conclude that the economic loss rule does not bar tort recovery....</p>
+        </div>
+      </li> -->
+
+      <ol>
+        <li class="source-item" *ngFor="let source of sources.sources; let sourceIndex = index" [class.hide]="source.id >= 5 && !fullReport">
+          <a [href]="source.url" target="_blank" class="source-title">{{ source.title }}  <saf-icon slot="start" icon-name="up-right-from-square" appearance="light" presentation></saf-icon></a>
+          <span class="source-metadata">{{ source.subtitle }}</span>
+          <div class="snippet-carousel">
+            <div class="snippet-container" *ngFor="let snippet of source.snippets; let i = index" [class.active]="i === activeSnippetIndices[sourceIndex]">
+              <div class="source-content">
+                <div class="source-content-header">
+                  <span>AI Summary</span>
+                </div>
+                <p>{{ snippet.summary }}</p>
+              </div>
+              <div class="source-content-2">
+                <div class="source-content-2-controls">
+                  <button (click)="prevSnippet(sourceIndex)" [disabled]="activeSnippetIndices[sourceIndex] === 0">
+                    <saf-icon slot="start" icon-name="chevron-left" appearance="light" presentation></saf-icon>
+                  </button>
+                  <span>{{i+1}} out of {{source.snippets.length}}</span>
+                  <button (click)="nextSnippet(sourceIndex)" [disabled]="activeSnippetIndices[sourceIndex] === source.snippets.length - 1">
+                    <saf-icon slot="start" icon-name="chevron-right" appearance="light" presentation></saf-icon>
+                  </button>
+                </div>
+                <div class="source-content-2-header">
+                  <span>Snippet</span>
+                </div>
+                <p><a [href]="snippet.url" target="_blank">{{ snippet.passage }} <saf-icon slot="start" icon-name="up-right-from-square" appearance="light" presentation></saf-icon></a></p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+
+      <!-- <ol>
+        <li class="source-item" *ngFor="let source of sources.sources" [class.hide]="source.id >= 5 && !fullReport">
+          <a href="#" class="source-title">{{source.title}}</a>
+          <span class="source-metadata">{{source.subtitle}}</span>
+          <div class="snippet-carousel">
+            <div class="snippet-container" *ngFor="let snippet of source.snippets; let i = index" [class.active]="i === activeSnippetIndex">
+              <div class="source-content">
+                <div class="source-content-header">
+                  <span>AI Summary</span>
+                </div>
+                <p>{{ snippet.summary }}</p>
+              </div>
+              <div class="source-content-2">
+                <div class="source-content-2-header">
+                  <div class="source-content-2-controls">
+                    <button (click)="prevSnippet()" [disabled]="activeSnippetIndex === 0">
+                      <saf-icon slot="start" icon-name="chevron-left" appearance="light" presentation></saf-icon>
+                    </button>
+                    <button (click)="nextSnippet(source)" [disabled]="activeSnippetIndex === source.snippets.length - 1">
+                      <saf-icon slot="start" icon-name="chevron-right" appearance="light" presentation></saf-icon>
+                    </button>
+                  </div>
+                </div>
+                <p>{{ snippet.passage }}</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol> -->
+
+
+
+
+      <!-- <ol *ngIf="!fullReport" *ngFor="let key of getKeys(myObject)">
+
+      </ol>
+      <ol *ngIf="fullReport" *ngFor="let key of getKeys(myObject)">
+        
+      </ol> -->
+
+
+      <!-- <li class="source-item" [class.prelim]="!fullReport">
+        <a href="#" class="source-title">Blackman v Metropolitan Tr. Auth.  </a>
+        <span class="source-metadata">N.Y.A.D. 2 Dept  •  June 1, 2022  •  2022 WL 1760133 </span>
+        <div class="new-source-content">
+          <p>Finding triable issues of fact regarding discrimination despite similarities in protected characteristics (gender) but differences in race. </p>
+        </div>
+      </li>
+      <li class="source-item" [class.prelim]="!fullReport">
+        <a href="#" class="source-title">McDonnell Douglas Corp. v. Green  </a>
+        <span class="source-metadata">United States Supreme Court  •  1973  •  411 U.S. 792  </span>
+        <div class="new-source-content">
+          <p>Establishing burden-shifting framework for discrimination claims.</p>
+        </div>
+      </li>
+      <li class="source-item" [class.prelim]="!fullReport">
+        <a href="#" class="source-title">Ruderman v. New York State Ins. Fund  </a>
+        <span class="source-metadata">N.Y.A.D. 1 Dept.  •  2023  •  215 A.D.3d 505, 187 N.Y.S.3d 608  </span>
+        <div class="new-source-content">
+          <p>Noting that hiring someone of the same protected class as plaintiff is evidence weighing against inference of discrimination, but not an absolute defense.</p>
+        </div>
+      </li>
+      <li class="source-item" [class.prelim]="!fullReport">
+        <a href="#" class="source-title">Ayers v. Bloomberg, LP. </a>
+        <span class="source-metadata">N.Y.A.D. 2 Dept.  •  2022  •  203 A.D.3d 872, 165 N.Y.S.3d 554</span>
+        <div class="new-source-content">
+          <p>Allowing age discrimination claim to proceed despite dismissal of sex discrimination claim where another woman was hired. </p>
+        </div>
+      </li>
+      <li class="source-item" *ngIf="fullReport" >
+        <a href="#" class="source-title">Phillips v. Chertoff </a>
+        <span class="source-metadata">United States District Court, S.D. New York  •  Dec. 16, 2005  •  2005 WL 3466033 </span>
+        <div class="new-source-content">
+          <p>Recognizing that discrimination against one employee cannot be cured, or disproven, solely by favorable, or equitable, treatment of other employees of the same race or sex. </p>
+        </div>
+      </li>
+      <li class="source-item" *ngIf="fullReport" >
+        <a href="#" class="source-title">Rodriguez v. New York City Health and Hospitals Corp.</a>
+        <span class="source-metadata">United States District Court, E.D. New York  •  Sept 8, 2015  •  2015 WL 5229850</span>
+        <div class="new-source-content">
+          <p>Recognizing that it is "extremely difficult" to establish gender-based animus when the plaintiff was male and the person was also male. </p>
+        </div>
+      </li> -->
+    </ol>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<button class="base-button" [class.btngrp]="icon === 'paperclip' || icon === 'reply-clock' || icon === 'table-columns' || icon === 'dashboard'" [disabled]="disabled" [ngClass]="'background-' + backgroundColor" [class]="color" [class.expanded]="expanded" [class.border]="addBorder" [class.active]="active" [style.width]="width ? width : null" [style.height]="height ? height : null">
+    <div class="button-content" *ngIf="icon != 'dashboard'">
+        <saf-icon [iconName]="icon" size="16px" [ngClass]="iconColor" [appearance]="iconAppearance"></saf-icon>
+        <span class="button-text" [ngClass]="font" *ngIf="expanded" [class.no-icon]="!icon || icon.length == 0">{{label}}</span>
+        <saf-icon class="dropdown-icon" *ngIf="includeDropdown" icon-name="chevron-down" size="16px"></saf-icon>
+        <saf-icon class="dropdown-icon" *ngIf="secondIcon" [iconName]="secondIcon" size="16px"></saf-icon>
+    </div>
+    <div class="button-content" *ngIf="icon === 'dashboard'">
+        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 2V8H6.5V2H2.5ZM1.5 1H2.5H6.5H7.5V2V8V9H6.5H2.5H1.5V8V2V1ZM10.5 8V14H14.5V8H10.5ZM9.5 7H10.5H14.5H15.5V8V14V15H14.5H10.5H9.5V14V8V7ZM6.5 11H2.5V14H6.5V11ZM2.5 10H6.5H7.5V11V14V15H6.5H2.5H1.5V14V11V10H2.5ZM10.5 2V5H14.5V2H10.5ZM9.5 1H10.5H14.5H15.5V2V5V6H14.5H10.5H9.5V5V2V1Z" fill="#054688"/>
+        </svg>
+        <span class="button-text" [ngClass]="font" *ngIf="expanded" [class.no-icon]="!icon || icon.length == 0">{{label}}</span>
+    </div>
+</button>

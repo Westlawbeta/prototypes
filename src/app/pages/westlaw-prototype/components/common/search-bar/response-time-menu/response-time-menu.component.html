@@ -1,0 +1,45 @@
+<!-- response-time-menu.component.html -->
+<div class="response-time-menu">
+  <div class="header">
+    <span class="title">Select type of search</span>
+  </div>
+  <div class="button-wrapper" (click)="toggleKeywordSearchType()">
+    <div class="item">
+      <div class="left">
+        <saf-icon color="#212223" icon-name="i-cursor" presentation></saf-icon>
+      </div>
+      <div class="left">
+        <div class="item-name">Search</div>
+        <div class="description">Search results matching Boolean or natural language terms entered</div>
+      </div>
+    </div>
+  </div>
+  <div class="button-wrapper" (click)="toggleKeywordSearchType()">
+    <div class="item">
+      <div class="left">
+        <saf-icon color="#212223" icon-name="sliders-simple" presentation></saf-icon>
+      </div>
+      <div class="left">
+        <div class="item-name">Precision Research</div>
+        <div class="description">Case results matching browsable attributes entered</div>
+      </div>
+      <div class="right">
+        <saf-icon icon-name="arrow-up-right-from-square" appearance="light" presentation></saf-icon>
+      </div>
+    </div>
+  </div>
+  <div class="button-wrapper" (click)="toggleKeywordSearchType()">
+    <div class="item">
+      <div class="left">
+        <saf-icon color="#212223" icon-name="cog" presentation></saf-icon>
+      </div>
+      <div class="left">
+        <div class="item-name">Advanced Search</div>
+        <div class="description">Form offering a more guided search experience</div>
+      </div>
+      <div class="right">
+        <saf-icon icon-name="arrow-up-right-from-square" appearance="light" presentation></saf-icon>
+      </div>
+    </div>
+  </div>
+</div>
