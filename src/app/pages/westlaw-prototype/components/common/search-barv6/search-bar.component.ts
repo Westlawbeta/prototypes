@@ -109,7 +109,7 @@ export class SearchBarComponentv6 {
 
   toggleOptions: ToggleOption[] = [
     {
-      label: 'Standard',
+      label: 'Deep',
       icon: 'telescope',
       deepSearch: this.deepSearch,
       textColor: 'blue',
@@ -149,7 +149,7 @@ export class SearchBarComponentv6 {
         }
         this.showResponseTimeMenu = true;
       });
-    } else if (option.label === 'Deep AI Research' || option.label === 'Quick' || option.label === 'Standard' || option.label === 'Expanded') {
+    } else if (option.label === 'Deep AI Research' || option.label === 'Basic' || option.label === 'Deep' || option.label === 'Deeper') {
       setTimeout(() => {
         if (this.showResponseTimeMenu) {
           this.showResponseTimeMenu = false;
@@ -358,13 +358,13 @@ export class SearchBarComponentv6 {
     console.log(this.deepSearch);
     this.toggleOptions[0].deepSearch = deepSearch;
     if(deepSearch === 1){
-      this.toggleOptions[0].label = 'Quick';
+      this.toggleOptions[0].label = 'Basic';
     }
     if(deepSearch === 2){
-      this.toggleOptions[0].label = 'Standard';
+      this.toggleOptions[0].label = 'Deep';
     }
     if(deepSearch === 3){
-      this.toggleOptions[0].label = 'Expanded';
+      this.toggleOptions[0].label = 'Deeper';
     }
   }
 }
