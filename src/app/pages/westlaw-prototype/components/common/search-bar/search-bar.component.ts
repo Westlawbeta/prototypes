@@ -112,7 +112,7 @@ export class SearchBarComponent {
       dropdownOnlyWhenActive: true,
     },
     {
-      label: 'Deep AI Research',
+      label: 'AI Deep Research',
       icon: 'telescope',
       textColor: 'blue',
       includeDropdown: true,
@@ -149,7 +149,7 @@ export class SearchBarComponent {
         }
         this.showResponseTimeMenu = true;
       });
-    } else if (option.label === 'Deep AI Research') {
+    } else if (option.label === 'AI Deep Research') {
       setTimeout(() => {
         if (this.showResponseTimeMenu) {
           this.showResponseTimeMenu = false;
@@ -245,7 +245,7 @@ export class SearchBarComponent {
 
   redirectToResearch() {
     if (this.inputContent && this.inputContent.length > 0) {
-      if (this.selectedOption?.label === 'Deep AI Research') {
+      if (this.selectedOption?.label === 'AI Deep Research') {
         if(window.location.pathname.includes('new-research-v2')) {
           this.router.navigate([
             '/westlaw-prototype/deep-research-v2/research-confirmation',

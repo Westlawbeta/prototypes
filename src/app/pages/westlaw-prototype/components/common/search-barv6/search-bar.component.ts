@@ -149,7 +149,7 @@ export class SearchBarComponentv6 {
         }
         this.showResponseTimeMenu = true;
       });
-    } else if (option.label === 'Deep AI Research' || option.label === 'Basic' || option.label === 'Deep' || option.label === 'Deeper') {
+    } else if (option.label === 'AI Deep Research' || option.label === 'Basic' || option.label === 'Deep' || option.label === 'Deeper') {
       setTimeout(() => {
         if (this.showResponseTimeMenu) {
           this.showResponseTimeMenu = false;
@@ -245,7 +245,7 @@ export class SearchBarComponentv6 {
 
   redirectToResearch() {
     if (this.inputContent && this.inputContent.length > 0) {
-      if (this.selectedOption?.label === 'Deep AI Research' || this.selectedOption?.label === 'Basic' || this.selectedOption?.label === 'Deep'  || this.selectedOption?.label === 'Deeper' ) {
+      if (this.selectedOption?.label === 'AI Deep Research' || this.selectedOption?.label === 'Basic' || this.selectedOption?.label === 'Deep'  || this.selectedOption?.label === 'Deeper' ) {
         if(window.location.pathname.includes('new-research-v2')) {
           this.router.navigate([
             '/westlaw-prototype/deep-research-v2/research-confirmation',

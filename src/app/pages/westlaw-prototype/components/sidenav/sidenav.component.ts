@@ -18,7 +18,7 @@ export class SidenavComponent {
   
   menuButtons = [
     { icon: 'magnifying-glass', label: 'Search', action: () => this.navigateTo('westlaw-prototype/new-research') },
-    { icon: 'telescope', label: 'Deep AI Research' },
+    { icon: 'telescope', label: 'AI Deep Research' },
     { icon: 'clock-rotate-left', label: 'History' },
     { icon: 'folders', label: 'Folders' },
     { icon: 'link-simple', label: 'My links' },
