@@ -245,7 +245,7 @@ export class SearchBarComponentv6 {
 
   redirectToResearch() {
     if (this.inputContent && this.inputContent.length > 0) {
-      if (this.selectedOption?.label === 'Deep AI Research' || this.selectedOption?.label === 'Quick' || this.selectedOption?.label === 'Standard'  || this.selectedOption?.label === 'Expanded' ) {
+      if (this.selectedOption?.label === 'Deep AI Research' || this.selectedOption?.label === 'Basic' || this.selectedOption?.label === 'Deep'  || this.selectedOption?.label === 'Deeper' ) {
         if(window.location.pathname.includes('new-research-v2')) {
           this.router.navigate([
             '/westlaw-prototype/deep-research-v2/research-confirmation',
