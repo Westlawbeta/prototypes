@@ -768,7 +768,6 @@ div[contenteditable="true"]:empty::before {
 
 .input-tray{
   width:800px;
-  height:250px;
   position: absolute;
   left: 20px;
   top: 170px;
@@ -827,4 +826,53 @@ div[contenteditable="true"]:empty::before {
   .input-tray{
     top: 124px;
   }
+}
+
+.tray-item-span{
+  color: var(--color-text-strong, #404040);
+  display: block;
+  width: 100%;
+  /* type/body/default/sm/regular/compact */
+  font-family: "Source Sans 3";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+
+.tray-content-divider{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.tray-content-subtitle {
+  color: #000;
+  /* type/heading/default/md/strong/standard */
+  font-family: Clario;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 19.2px */
+  width: 100%;
+  display: block;
+}
+
+.tray-item-presicion-span {
+  color: var(--color-text-strong, #404040);
+  /* type/body/default/md/regular/standard */
+  font-family: "Source Sans 3";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.tray-item-presicion-link{
+  display: inline-block;
+  color:#0062C4;
+  cursor: pointer;
+}
+
+.tray-item-presicion {
+  margin-top: 8px;
 }
