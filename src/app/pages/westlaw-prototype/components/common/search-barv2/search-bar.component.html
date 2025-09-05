@@ -136,11 +136,13 @@
           anchor="anchor-history"
           trigger-on-click="false"
         >
-          Recent questions
+          Recent questions2
         </saf-tooltip>
 
         <app-button
-          [ngClass]="openTaskLibraryDialog ? 'button-icon-active' : 'button-icon'"
+          [ngClass]="
+            openTaskLibraryDialog ? 'button-icon-active' : 'button-icon'
+          "
           id="anchor-task-lib"
           [expanded]="false"
           [icon]="'dashboard'"
@@ -156,7 +158,9 @@
         </saf-tooltip>
 
         <app-button
-          [ngClass]="openAttachmentDialog ? 'button-icon-active' : 'button-icon'"
+          [ngClass]="
+            openAttachmentDialog ? 'button-icon-active' : 'button-icon'
+          "
           id="anchor-paperclip"
           [expanded]="false"
           [icon]="'paperclip'"

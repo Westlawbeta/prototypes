@@ -1,4 +1,9 @@
-<div class="search-bar" id="search-bar" *ngIf="!compactMode" [class.search]="this.searchType === 'Search'">
+<div
+  class="search-bar"
+  id="search-bar"
+  *ngIf="!compactMode"
+  [class.search]="this.searchType === 'Search'"
+>
   <div class="extra-border">
     <div class="border-gradient">
       <div class="input-container">
@@ -39,18 +44,58 @@
               ></app-toggle-v2> -->
               <button class="agent-time" *ngIf="this.searchType !== 'Search'">
                 <span class="icon">
-                  <svg *ngIf="deepSearch === 1" width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333Z" fill="#666666"/>
+                  <svg
+                    *ngIf="deepSearch === 1"
+                    width="15"
+                    height="20"
+                    viewBox="0 0 20 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333Z"
+                      fill="#666666"
+                    />
                   </svg>
-                  <svg *ngIf="deepSearch === 2" width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333Z" fill="#666666"/>
+                  <svg
+                    *ngIf="deepSearch === 2"
+                    width="15"
+                    height="20"
+                    viewBox="0 0 20 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333Z"
+                      fill="#666666"
+                    />
                   </svg>
-                  <svg *ngIf="deepSearch === 3" width="15" height="20" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333ZM5.83333 19.5H14.1667H15V21.125H14.1667H5.83333H5V19.5H5.83333Z" fill="#666666"/>
+                  <svg
+                    *ngIf="deepSearch === 3"
+                    width="15"
+                    height="20"
+                    viewBox="0 0 20 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.3333 24.375V9.75H10.8333H10V8.9375V1.625H1.66667V24.375H18.3333ZM11.6667 1.92969V8.125H18.0208L11.6667 1.92969ZM12.0833 0L20 7.71875V24.375V26H18.3333H1.66667H0V24.375V1.625V0H1.66667H12.0833ZM5.83333 13H14.1667H15V14.625H14.1667H5.83333H5V13H5.83333ZM5.83333 16.25H14.1667H15V17.875H14.1667H5.83333H5V16.25H5.83333ZM5.83333 19.5H14.1667H15V21.125H14.1667H5.83333H5V19.5H5.83333Z"
+                      fill="#666666"
+                    />
                   </svg>
                 </span>
                 <span class="label">Agent Time: ~10 min</span>
-                <span class="chevron"><saf-icon icon-name="chevron-down" size="16px" class="dropdown-icon" aria-hidden="true" appearance="light" role="presentation" presentation=""></saf-icon></span>
+                <span class="chevron"
+                  ><saf-icon
+                    icon-name="chevron-down"
+                    size="16px"
+                    class="dropdown-icon"
+                    aria-hidden="true"
+                    appearance="light"
+                    role="presentation"
+                    presentation=""
+                  ></saf-icon
+                ></span>
               </button>
             </div>
             <div class="right-buttons">
@@ -78,37 +123,245 @@
       </div>
     </div>
   </div>
-  <div class="input-tray" *ngIf="showTray">
+  <div
+    class="input-tray"
+    *ngIf="showTray && this.searchType === 'AI Deep Search'"
+  >
     <div class="tray-category">
-      <div class="tray-category-item" [class.active]="trayType === 'recent'" (click)="handleTrayTypeChange('recent')">
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'recent'"
+        (click)="handleTrayTypeChange('recent')"
+      >
         Recent Questions
       </div>
-      <div class="tray-category-item" [class.active]="trayType === 'saved'" (click)="handleTrayTypeChange('saved')">
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'saved'"
+        (click)="handleTrayTypeChange('saved')"
+      >
         Saved Questions
       </div>
     </div>
     <div class="tray-content">
       <div class="tray-item" *ngIf="trayType === 'recent'">
-        <span class="tray-item-link">Does corporate law permit director proxy voting?</span>
+        <span class="tray-item-link"
+          >Does corporate law permit director proxy voting?</span
+        >
         <span class="tray-item-star">
-          <saf-icon icon-name="star" size="16px" aria-hidden="true" appearance="light" role="presentation" presentation=""></saf-icon>
+          <saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="light"
+            role="presentation"
+            presentation=""
+          ></saf-icon>
         </span>
       </div>
       <div class="tray-item" *ngIf="trayType === 'recent'">
-        <span class="tray-item-link">What is deadline for filing a continuation application?</span>
-        <span class="tray-item-star"><saf-icon icon-name="star" size="16px" aria-hidden="true" appearance="light" role="presentation" presentation=""></saf-icon></span>
+        <span class="tray-item-link"
+          >What is deadline for filing a continuation application?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="light"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
       </div>
       <div class="tray-item" *ngIf="trayType === 'recent'">
-        <span class="tray-item-link">what is the definition of a joint employer under the FLSA?</span>
-        <span class="tray-item-star"><saf-icon icon-name="star" size="16px" aria-hidden="true" appearance="light" role="presentation" presentation=""></saf-icon></span>
+        <span class="tray-item-link"
+          >What is considered a draft of an expert report for purposes of FRCP
+          Rule 26?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="light"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
       </div>
-      <div class="tray-item" *ngIf="trayType === 'saved'">
-        <span class="tray-item-link">Can you use extrinsic evidence in a 12(b)(7) motion to dismiss?</span>
-        <span class="tray-item-star"><saf-icon icon-name="star" size="16px" aria-hidden="true" appearance="light" role="presentation" presentation=""></saf-icon></span>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >what is the definition of a joint employer under the FLSA?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="solid"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
       </div>
-      <div class="tray-item" *ngIf="trayType === 'saved'">
-        <span class="tray-item-link">Can a news article be used as a learned treatise at trial?</span>
-        <span class="tray-item-star"><saf-icon icon-name="star" size="16px" aria-hidden="true" appearance="light" role="presentation" presentation=""></saf-icon></span>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >Can you use extrinsic evidence in a 12(b)(7) motion to dismiss?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="light"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
+      </div>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >Under level 2 discovery, what is the deadline to assert new
+          claims?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="solid"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
+      </div>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >Can a news article be used as a learned treatise at trial?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="light"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
+      </div>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >Can a criminal defendant be forced to have a hearing on WebEx?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="light"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
+      </div>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >Is there case law on why a plaintiff’s credibility is always
+          relevant?</span
+        >
+        <span class="tray-item-star"
+          ><saf-icon
+            icon-name="star"
+            size="16px"
+            aria-hidden="true"
+            appearance="light"
+            role="presentation"
+            presentation=""
+          ></saf-icon
+        ></span>
+      </div>
+    </div>
+  </div>
+  <div class="input-tray" *ngIf="showTray && this.searchType === 'Search'">
+    <div class="tray-category">
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'recent'"
+        (click)="handleTrayTypeChange('recent')"
+      >
+        Suggestions
+      </div>
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'saved'"
+        (click)="handleTrayTypeChange('saved')"
+      >
+        Cases
+      </div>
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'saved'"
+        (click)="handleTrayTypeChange('saved')"
+      >
+        Statutes & Court Rules
+      </div>
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'saved'"
+        (click)="handleTrayTypeChange('saved')"
+      >
+        Regulations
+      </div>
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'saved'"
+        (click)="handleTrayTypeChange('saved')"
+      >
+        Secondary Sources
+      </div>
+      <div
+        class="tray-category-item"
+        [class.active]="trayType === 'saved'"
+        (click)="handleTrayTypeChange('saved')"
+      >
+        Other
+      </div>
+    </div>
+    <div class="tray-content">
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >Is a performance improvement plan an adverse action?</span
+        >
+        <span class="tray-item-span"> All Federal </span>
+      </div>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >Is impossibility of performance an affirmative defense to a breach of
+          contract claim</span
+        >
+        <span class="tray-item-span"> All Federal </span>
+      </div>
+      <div class="tray-item" *ngIf="trayType === 'recent'">
+        <span class="tray-item-link"
+          >What is impossibility for purposes of contract performance?</span
+        >
+        <span class="tray-item-span"> All Federal | New York</span>
+      </div>
+      <saf-divider class="tray-content-divider"></saf-divider>
+      <span class="tray-content-subtitle"> Precision Research </span>
+      <div class="tray-item-presicion">
+        <span class="tray-item-presicion-span"> Legal issue: </span>
+        <span class="tray-item-presicion-link">
+          Contract Performance &#8594; Impossibility or imppracticability
+        </span>
+      </div>
+      <div class="tray-item-presicion">
+        <span class="tray-item-presicion-span"> Legal issue: </span>
+        <span class="tray-item-presicion-link">
+          Contract Performance &#8594; Impaiment
+        </span>
       </div>
     </div>
   </div>
@@ -192,7 +445,9 @@
         </saf-tooltip>
 
         <app-button
-          [ngClass]="openTaskLibraryDialog ? 'button-icon-active' : 'button-icon'"
+          [ngClass]="
+            openTaskLibraryDialog ? 'button-icon-active' : 'button-icon'
+          "
           id="anchor-task-lib"
           [expanded]="false"
           [icon]="'dashboard'"
@@ -208,7 +463,9 @@
         </saf-tooltip>
 
         <app-button
-          [ngClass]="openAttachmentDialog ? 'button-icon-active' : 'button-icon'"
+          [ngClass]="
+            openAttachmentDialog ? 'button-icon-active' : 'button-icon'
+          "
           id="anchor-paperclip"
           [expanded]="false"
           [icon]="'paperclip'"
